@@ -1,8 +1,8 @@
 {
-  "id": "office365-owa",
-  "name": "Office 365 Outlook Web App",
+  "id": "office365-owa-forked",
+  "name": "Office 365 Outlook Web App - Forked",
   "version": "1.0.0",
-  "description": "Office 365 Outlook Web App",
+  "description": "Office 365 Outlook Web App - Forked",
   "main": "index.js",
   "author": "Adam Birds <adam.birds@adbtechltd.co.uk>",
   "contributors": [

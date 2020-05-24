@@ -15,16 +15,20 @@ module.exports = Franz => {
     } else {
       // new app
       const folders = document.querySelector('div[title="Folders"]');
+      debugger;
       if (!folders) {
         return;
       }
 
-      unreadMail = [...folders.parentNode.children].reduce((count, child) => {
-        const unread = child.querySelector('.screenReaderOnly');
-        return unread && unread.textContent === 'unread'
-          ? count + parseInt(unread.previousSibling.textContent, 10)
-          : count;
-      }, 0);
+      unreadMail = [...folders.parentNode.parentNode.children].reduce(
+        (count, child) => {
+          const unread = child.querySelector('.screenReaderOnly');
+          return unread && unread.textContent === 'unread'
+            ? count + parseInt(unread.previousSibling.textContent, 10)
+            : count;
+        },
+        0
+      );
     }
 
     Franz.setBadge(unreadMail);
